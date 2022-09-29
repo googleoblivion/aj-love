@@ -2,8 +2,13 @@ local WaitingOnBar = false
 local height_wanted = 0.0
 
 CreateThread(function()
-    Citizen.InvokeNative(0x144da052257ae7d8, true)
-    print("ENABLED NETWORK ALLOW REMOTE SYNC OF LOCAL PLAYERS")
+    Citizen.InvokeNative(0x144da052257ae7d8, true) --NETWORK_ALLOW_REMOTE_SYNCED_SCENE_LOCAL_PLAYER_REQUESTS
+    while not RequestScriptAudioBank("DLC_HEIST3/ARCADE_GENERAL_01", 0) do Wait(0) end
+    while not RequestScriptAudioBank( "DLC_HEIST3/ARCADE_GENERAL_02", 0) do Wait(0) end
+    while not RequestScriptAudioBank("DLC_TUNER/DLC_Tuner_Arcade_General", 0) do Wait(0) end
+    while not RequestScriptAudioBank("LineArcadeMinigame", 0) do Wait(0) end
+
+    print("Scene Sync Enabled | Sounds Requested")
 end)
 
 
