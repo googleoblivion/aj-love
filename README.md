@@ -5,9 +5,9 @@
 
 - [x] Animations
 - [x] Syncing (Needs work)
-- [ ] Sounds
-- [ ] Better way of doing the % math
-- [ ] Better way of drawing the Bar on the object
+- [x] Sounds
+- [x] Better way of doing the % math
+- [x] Better way of drawing the Bar on the object
 
 ### Credits
 
